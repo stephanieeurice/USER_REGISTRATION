@@ -7,10 +7,10 @@
 }
 
 table.table.table-striped {
-    border: 1px solid #cccccc;
+    border: 5px solid #cccccc;
 }
 table.table.table-striped>thead>tr{
-    background-color: #343a40;
+    background-color: #545352;
 }
 table.table.table-striped>thead>tr>th{
     color: white;
@@ -19,7 +19,7 @@ table.table.table-striped {
     text-align: center;
 }
 .form-container{
-    color: #343a40;
+    color: #545352;
     width: 70%;
     padding: 15px;
     margin-bottom: 50px;
@@ -30,7 +30,7 @@ table.table.table-striped {
     align-items: center;
 }
 .title{
-    background-color: rgb(52, 58, 64, 0.1);
+    background-color: rgba(64, 70, 76, 0.1);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -41,7 +41,7 @@ label{
     font-weight: 600;
 }
 .error-message{
-    color: #b50d00;
-    font-size: 13px;
+    color: #e70f00;
+    font-size: 15px;
     margin-top: 3px;
 }

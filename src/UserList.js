@@ -50,7 +50,10 @@ export const UserList = () => {
                                         <td>{user.email}</td>
                                         <td>{user.number}</td>
                                         <td>
-                                            <Link to={`/edit/${user._id}`} ><FaEdit style={{ color: '#363738' }} /></Link>
+                                            <Link to={`/edit/${user._id}`} ><FaEdit style={{ color: '#fcdb03' }} /></Link>
+                                        </td>
+                                        <td>
+                                            <Link to={`/delete/${user._id}`} ><FaTrash style={{ color: '#fc0303' }} /></Link>
                                         </td>
                                     </tr>
                             )

@@ -1,29 +1,29 @@
-import react from "react";
+import React from "react";
 import { useForm } from "react-hook-form";
-import Button from '@material-ui/core/Button';
+//import { Button } from "bootstrap"; 
+import { Button } from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/styles';
-import SaveIcon from '@material-ui/icons/Save';
+//import { SaveIcon } from "@material-ui/icons";
+import { SaveIcon } from '@material-ui/core/Icon';
 import { ErrorMessage } from "@hookform/error-message";
 import './style.css'
 
 const useStyles = makeStyles((theme) => ({
     button: {
-                marginTop: theme.spacing(1),
-                marginBottom: theme.spacing(1)
-            },
-    })
-);
+        marginTop: theme.spacing(1),
+        marginBottom: theme.spacing(1)
+    },
+}));
 
-export const RegForm = ({ user, onsubmit}) => {
-    const { register, formState: { errors }, hansdleSubmit} = useForm({
+export const RegForm = ({ user, onSubmit}) => {
+    const { register, formState: { errors }, handleSubmit} = useForm({
         criteriaMode: "all",
         defaultValues: {
-            
             lastName: user ? user.lastName : "",
             firstName: user ? user.firstName : "",
             middleName: user ? user.middleName : "",
             age: user ? user.age : "",
-            gender: user ? user.gender : "Male/Female",
+            gender: user ? user.gender : "",
             address: user ? user.address : "",
             email: user ? user.email : "",
             number: user ? user.number : "",
@@ -100,21 +100,16 @@ export const RegForm = ({ user, onsubmit}) => {
                         render={({ message }) => <p className="error-message">{message}</p>}
                     />
                 </div>
-                <div className="form-group">
-                    <Button
-                        type="submit"
-                        variant="contained"
+                <div className="form-group">    
+                <Button type="submit" variant="contained"
                         style={{
-                            backgroundColor: '#363738',
+                            backgroundColor: '#343a40',
                             color: '#fff',
                             width: '100%'
                         }}
-                        size="Small"
+                        size="medium"
                         className={classes.button}
-                        startIcon={<SaveIcon />}
-                    >
-                        Save
-                    </Button>
+                        startIcon={<SaveIcon />} > SAVE </Button>
                 </div>
             </form>
 
