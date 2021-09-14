@@ -18,4 +18,13 @@ export const updateUser = (user, id) => fetch(`http://localhost:4000/${id}`, {
     body: JSON.stringify(user)
 })
 
+export const deleteUser =(user, id)=> fetch(`http://localhost:4000/${id}`, {
+    method: "POST",
+    headers: {
+        "Accept": "application/json",
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify(user)
+})
+
 export const getUser = (id) => fetch(`http://localhost:4000/${id}`).then(res => res.json())
